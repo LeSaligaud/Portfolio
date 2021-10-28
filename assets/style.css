@@ -1,0 +1,325 @@
+/* -- Fonts -- */
+@font-face {
+    font-family: Valid-Harmony; 
+    src: url("./fonts/Valid-Harmony/Valid-Harmony.ttf") format('truetype'),
+        url("./fonts/Valid-Harmony/Valid-Harmony.otf") format('opentype'),
+        url("./fonts/Valid-Harmony/Valid-Harmony.woff") format("woff");
+}
+/* -- Fonts -- */
+
+* {
+    padding: 0;
+    margin: 0;
+
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* -- Nav bar -- */
+nav {
+    display: flex;
+    justify-content: right;
+    padding: 5vh 17vw 2vh 0;
+    position: fixed;
+    width: 100vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+    font-size: 1.1em;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#navbar-propos {
+    margin-left: 7vw;
+}
+/* -- Nav bar -- */
+
+
+/* -- Partie : Photo + nom -- */
+#presentation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 0 5vh 0;
+
+    background-image: url("./images/bg-min.jpg");
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#photo {
+    width: 250px;
+    height: 250px;
+    margin-right: 13vw;
+    border-radius: 50%;
+    border: solid black 1px;
+}
+
+#div-titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-style: italic;
+    letter-spacing: 0.1em;
+}
+
+#nom-titre {
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    -webkit-text-stroke: 2px black;
+    color: white;
+}
+
+#job-titre {
+    color: rgb(0,23,249);
+}
+/* -- Fin Partie : Photo + nom  -- */
+
+
+/* -- Partie : A propos -- */
+#a-propos-container {
+    display: flex;
+    align-items: center;
+    font-family: Verdana, Tahoma, sans-serif;
+    padding: 1vh 0 4vh 0;
+    background-color: rgb(170,196,231);
+}
+
+#a-propos-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#jobpic {
+    height: 40vh;
+}
+#jobdesc {
+    font-size: 1.4em;
+    font-weight: 400;
+    text-align: center;
+}
+
+#titre-apropos {
+    font-family: Valid-Harmony, sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 2em;
+    font-style: italic;
+}
+#text {
+    margin: 0 2 vw;
+    padding-top: 3vh;
+}
+#text p {
+    width: 90%;
+} 
+/* -- Fin Partie : A propos -- */
+
+
+/* -- Partie : Mes projets -- */
+#titre-projets {
+    text-align: center;
+    font-size: 2em;
+    font-style: italic;
+    font-family: Valid-Harmony, sans-serif;
+    letter-spacing: 0.2em;
+    margin: 5vh 0;
+}
+
+#mes-projets-container {
+    font-family: Verdana, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7vh;
+}
+
+.thumbnails {
+    text-align: center;
+    width: 30vw;
+}
+.thumbnails img {
+    width: 20vw;
+    height: 20vh;
+    border-radius: 2px;
+    object-fit: cover;
+}
+.thumbnails h4 {
+    margin: 1vh 0 1vh 0;
+}
+/* -- Fin Partie : Mes projets -- */
+
+
+/* --- Partie : Actually learning --- */
+#learning-container {
+    background-image: url("./images/actuellement-min.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 3vh;
+    font-family: Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#learning-container h2 {
+    text-align: center;
+    font-size: 2em;
+    font-style: italic;
+    font-family: Valid-Harmony, sans-serif;
+    letter-spacing: 0.2em;
+}
+#learning-title-mobile {
+    display: none;
+}
+
+#learning-container div {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#learning-container div p {
+    margin-bottom: 3vh;
+}
+
+#logoPG {
+    width: 30vw;
+}
+#logoDebian {
+    width: 5vw;
+}
+#logoC {
+    width: 20vw;
+} 
+/* --- Fin Partie : Actually learning --- */
+
+
+/* -- TOUS projets confondus -- */
+.projet-container {
+    margin: 5vh 0 7vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-family: Valid-Harmony;
+
+    margin-top: 3vh;
+    width: 100vw;
+}
+.sous-titre {
+    font-family: Valid-Harmony;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.titre-container h2 {
+    font-size: 2.5em;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+}
+
+.logoContainer {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo {
+   object-fit: contain;
+   width: 150px;
+}
+
+.description {
+    width: 80vw;
+    margin-top: 5vh;
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+/* -- TOUS projets confondus -- */
+
+/* -- Partie : 2TServices -- */
+#logo1-2t {
+    transform: translate(0, -2vh);
+}
+#logo2-2t {
+    transform: translate(0, 2vh);
+    width: 75px;
+}
+#logo3-2t {
+    transform: translate(0, -6vh);
+    width: 150px;
+}
+#logo4-2t {
+    transform: translate(0, 2vh);
+}
+#logo5-2t {
+    transform: translate(0, -6vh);
+}
+#logo6-2t {
+    transform: translate(0, 1vh);
+}
+
+#recommendation-2t {
+    display: flex;
+    align-items: center;
+    margin-top: 3vh;
+    transform: translate(16vw, 0);
+}
+#recommendation-2t h4 {
+    margin-right: 3vw;
+    font-family: century;
+    font-size: 1.2em;
+}
+
+#recommendation-2t a img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* -- Fin Partie : 2TServices -- */
+
+/* -- Partie : Fast Caddie -- */
+#logo2-Fc {
+    width: 5vw;
+}
+#logo4-Fc {
+    width: 5vw;
+}
+/* -- Fin Partie : Fast Caddie -- */
+
+
+/* -- Partie : Footer -- */
+footer {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7vh;
+    height: 6vh;
+    background-color: rgb(170,196,231);
+
+    font-family: Valid-Harmony;
+    letter-spacing: 0.2em;
+    font-weight: bolder;
+}
+/* -- Fin Partie : Footer -- */

@@ -1,0 +1,87 @@
+/* -- Slider 2TServices -- */
+.splide {
+    margin: 3vh 2vh 0 2vh;
+}
+.splide__list, .splide__slide {
+    height: 70vh;
+    width: 80vw;
+}
+
+/* -- Slider 2TServices -- */
+
+
+/* -- Slider Portfolio -- */
+.sliderPf-container {
+    position: relative;
+    margin: 3vh 2vh 0 2vh;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 70vh;
+    width: 80vw;
+}
+.slide-Pf {
+    object-fit: contain;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.carre {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    border-radius: 10px;
+}
+.carre:hover {
+    background-image: linear-gradient(to left, rgba(75, 75, 75, 0.2), rgba(75,75,75,0));
+}
+.carre:active {
+    background-image: linear-gradient(to left, rgba(75, 75, 75, 0.3), rgba(75,75,75,0));
+}
+.cG {
+    left: 0;
+}
+.cD {
+    right: 0;
+}
+.fl {
+    color: rgb(78, 78, 78);
+}
+.fg {
+    position: absolute;
+    left: 1.5vw;
+    top: 50%;
+}
+.fd {
+    position: absolute;
+    right: 2vw;
+    top: 50%;
+}
+/* -- Slider Portfolio -- */
+
+
+/* -- Slider FastCaddie -- */
+.sliderFc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+.carousel-img-Fc {
+    margin: 4vh 2vh 0 2vh;
+    height: 100%;
+    width: 95%;
+    object-fit: contain;
+    transition: 300ms;
+}
+.fleche:hover {
+    color: rgb(143, 179, 226);
+}
+.fleche:active {
+    color: rgb(115, 162, 223);
+}
+/* -- Slider FastCaddie -- */
