@@ -2,11 +2,10 @@
 .splide {
     margin: 3vh 2vh 0 2vh;
 }
-.splide__list, .splide__slide {
-    height: 70vh;
+.splide__list, .splide__slide, .splide__slide a, .splide__slide img {
+    height: 80vh;
     width: 80vw;
 }
-
 /* -- Slider 2TServices -- */
 
 

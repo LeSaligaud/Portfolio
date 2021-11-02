@@ -7,10 +7,11 @@
 
 */
 
+
 @media only screen and (max-width: 767px) {
     /* Partie : Nav */
     nav {
-        padding: 4vh 10vw 0 0;
+        padding-right:10vw;
     }
 
     /* Partie : Photo + nom */
@@ -23,6 +24,12 @@
 
     #photo {
         margin: 0 0 3vh 0;
+    }
+    #perso {
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        transform: translate(2.5vw, -7vh);
     }
     /* Fin Partie : Photo + nom */
 
@@ -40,7 +47,7 @@
 
     /* Partie : Mes projets */
     #mes-projets-container {
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
     }
     .thumbnails {
@@ -90,54 +97,33 @@
     }
 
     .logo{
-        width: 30vw;
-    }
-    #logo1-2t, #logo2-2t, #logo3-2t, #logo4-2t, #logo5-2t, #logo6-2t {
-        transform: translate(0 , 0);
-    }
-
-    .carousel {
-        margin: 0 0;
-        width: 98vw;
+        width: 10vw;
     }
     /* Fin Partie : TOUS projets confondus */
 
     /* Partie : 2TServices */
+    #logo1-2t, #logo2-2t, #logo3-2t, #logo4-2t, #logo5-2t, #logo6-2t {
+        transform: translate(0 , 0);
+    }
     #recommendation-2t {
         flex-direction: column-reverse;
-        transform: translate(0, 0);
         text-align: center;
-        margin-top: 3vh
+        margin-top: 3vh;
+        margin-right:20vw;
     }
     #recommendation-2t a img {
         margin-bottom: 2vh;
     }
-    /* Fin Partie : 2TServices */
-
-    /* Partie : Fast Caddie */
-    .sliderFc-container {
+    .splide {
+        margin: 0 0;
+        object-fit: contain;
     }
-    .carousel-img-Fc {
+    .splide__list, .splide__slide, .splide__slide a, .splide__slide img {
+        object-fit: contain;
     }
-    #logo1-Fc, #logo2-Fc, #logo3-Fc, #logo4-Fc, #logo5-Fc {
-        width: 10vw;
-    }
-    /* Fin Partie : Fast Caddie */
-    
+    /* Fin Partie : 2TServices */  
 
     footer {
         text-align: center;
     }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-@media only screen and (min-width: 1200px) {
-
 }

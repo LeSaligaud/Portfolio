@@ -1,14 +1,19 @@
 /* -- Fonts -- */
 @font-face {
     font-family: Valid-Harmony; 
-    src: url("./fonts/Valid-Harmony/Valid-Harmony.ttf") format('truetype'),
-        url("./fonts/Valid-Harmony/Valid-Harmony.otf") format('opentype'),
-        url("./fonts/Valid-Harmony/Valid-Harmony.woff") format("woff");
+    src: url("./fonts/Valid-Harmony.ttf") format('truetype'),
+        url("./fonts/Valid-Harmony.otf") format('opentype'),
+        url("./fonts/Valid-Harmony.woff") format("woff");
 }
 /* -- Fonts -- */
 
-* {
-    padding: 0;
+/* -- Lazy loading -- */
+.lazy {
+    opacity: 0;
+}
+/* -- Lazy loading -- */
+
+body {
     margin: 0;
 
     scroll-behavior: smooth;
@@ -19,23 +24,30 @@
 nav {
     display: flex;
     justify-content: right;
-    padding: 5vh 17vw 2vh 0;
+    padding: 0 10vw 0 0;
     position: fixed;
     width: 100vw;
+    z-index: 99;
 }
 
+.nav-column {
+    border-radius: 5px;
+    margin-right: 7vw;
+    padding: 5vh 1vw 1vh 1vw;
+}
+.nav-column:hover {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(170,196,231, 1));
+}
 nav a {
     text-decoration: none;
+}
+nav p {
+    
     color: rgb(22, 22, 22);
     font-size: 1.1em;
     font-family: Verdana, Tahoma, sans-serif;
 }
-
-#navbar-propos {
-    margin-left: 7vw;
-}
 /* -- Nav bar -- */
-
 
 /* -- Partie : Photo + nom -- */
 #presentation-container {
@@ -57,6 +69,11 @@ nav a {
     margin-right: 13vw;
     border-radius: 50%;
     border: solid black 1px;
+    transition: 2s;
+    transform: translate(-25vw, 0);
+}
+#perso {
+    display: none;
 }
 
 #div-titre {
@@ -68,6 +85,9 @@ nav a {
     font-family: Verdana, Tahoma, sans-serif;
     font-style: italic;
     letter-spacing: 0.1em;
+
+    transition: 2s;
+    transform: translate(25vw,0);
 }
 
 #nom-titre {
@@ -100,6 +120,10 @@ nav a {
     width: 50%;
 }
 
+#job {
+    transition: 1s;
+}
+
 #jobpic {
     height: 40vh;
 }
@@ -118,6 +142,7 @@ nav a {
 #text {
     margin: 0 2 vw;
     padding-top: 3vh;
+    transition: 1s;
 }
 #text p {
     width: 90%;
@@ -154,6 +179,38 @@ nav a {
 }
 .thumbnails h4 {
     margin: 1vh 0 1vh 0;
+}
+
+.img2t, .imgFc, .imgPf {
+    transition: 0.7s;
+}
+.img2t-hover, .imgFc-hover, .imgPf-hover {
+    animation: opacityChange 0.7s forwards;
+}
+@keyframes opacityChange {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+.img2t-hover, .imgFc-hover, .imgPf-hover {
+    display: none;
+}
+.th2t:hover .img2t {
+    display: none;
+}
+.th2t:hover .img2t-hover {
+    display:inline;
+}
+.thFc:hover .imgFc {
+    display: none;
+}
+.thFc:hover .imgFc-hover {
+    display: inline;
+}
+.thPf:hover .imgPf {
+    display: none;
+}
+.thPf:hover .imgPf-hover {
+    display: inline;
 }
 /* -- Fin Partie : Mes projets -- */
 
@@ -193,14 +250,28 @@ nav a {
     margin-bottom: 3vh;
 }
 
+#logoJM {
+    transform: translate(-20vw,0);
+    transition: 1s;
+}
 #logoPG {
     width: 30vw;
+    transform: translate(-30vw,0);
+    transition: 1s;
+}
+#logoApache {
+    transition: 1s;
+    transform: translate(20vw,0);
 }
 #logoDebian {
     width: 5vw;
+    transition: 1s;
+    transform: translate(20vw,0);
 }
 #logoC {
     width: 20vw;
+    transition: 1s;
+    transform: translate(30vw,0);
 } 
 /* --- Fin Partie : Actually learning --- */
 
@@ -260,30 +331,36 @@ nav a {
 /* -- Partie : 2TServices -- */
 #logo1-2t {
     transform: translate(0, -2vh);
+    transition: 1s;
 }
 #logo2-2t {
     transform: translate(0, 2vh);
+    transition: 1.2s;
     width: 75px;
 }
 #logo3-2t {
     transform: translate(0, -6vh);
+    transition: 1.4s;
     width: 150px;
 }
 #logo4-2t {
     transform: translate(0, 2vh);
+    transition: 1.6s;
 }
 #logo5-2t {
     transform: translate(0, -6vh);
+    transition: 1.8s;
 }
 #logo6-2t {
     transform: translate(0, 1vh);
+    transition: 2s;
 }
 
 #recommendation-2t {
     display: flex;
     align-items: center;
     margin-top: 3vh;
-    transform: translate(16vw, 0);
+    transition: 1.5s;
 }
 #recommendation-2t h4 {
     margin-right: 3vw;
@@ -294,17 +371,41 @@ nav a {
 #recommendation-2t a img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50%;   
 }
-
 /* -- Fin Partie : 2TServices -- */
 
+
+/* -- Partie : Portfolio -- */
+#logo1-Pf {
+    transition: 1.6s;
+}
+#logo2-Pf {
+    transition: 1.4s;
+}
+#logo3-Pf {
+    transition: 1.2s;
+}
+/* -- Fin Partie : Portfolio -- */
+
+
 /* -- Partie : Fast Caddie -- */
+#logo1-Fc {
+    transition: 1.3s;
+}
 #logo2-Fc {
     width: 5vw;
+    transition: 1.6s;
+}
+#logo3-Fc {
+    transition: 1.9s;
 }
 #logo4-Fc {
     width: 5vw;
+    transition: 1.6s;
+}
+#logo5-Fc {
+    transition: 1.3s;
 }
 /* -- Fin Partie : Fast Caddie -- */
 

@@ -19,12 +19,13 @@
 </head>
 
 <body>
+    <noscript>Vous devez activer JavaScript pour un affichage correct du site !</noscript>
     
     <!-- Menu de navigation -->
     <header>
         <nav>
-            <p><a href="#partProjet" id="navbar-projets">Projets</a></p>
-            <p><a href="#partTwo" id="navbar-propos">A propos</a></p>
+            <a href="#2t-container" id="navbar-projets"><div class="nav-column"> <p>Projets</p> </div></a>
+            <a href="#a-propos-container" id="navbar-propos"><div class="nav-column"> <p>A propos</p> </div></a>
         </nav>
     </header>
     <!-- Menu de navigation -->
@@ -33,9 +34,10 @@
     <main>
         <!-- Partie : Photo + nom -->
         <div id="presentation-container">
-            <img id="photo" src="assets/images/profil-pic-min.jpg" alt="Profil picture">
+            <img id="photo" class="lazy" data-src="assets/images/profil-pic-min.jpg" alt="Profil picture">
+            <img id="perso" src="assets/images/2d-hero.png" alt="Hero hollow knight">
 
-            <div id="div-titre">
+            <div id="div-titre" class="lazy">
                 <h1 id="nom-titre">Jordan Archambault</h1>
                 <h3 id="job-titre">{ Développeur web/web mobile }</h3>
             </div>
@@ -45,12 +47,12 @@
 
         <!-- Partie : A propos -->
         <div id="a-propos-container">
-            <div>
-                <img id="jobpic" src="assets/images/imgJob-min.png" alt="Work">
-                <p id="jobdesc">Étudiant à l'AFORP pour un Bachelor CDA en alternance</p>
+            <div id="job" class="lazy">
+                <img id="jobpic" class="lazy" data-src="assets/images/imgJob-min.png" alt="Work">
+                <p id="jobdesc">Étudiant à H3 Hitema pour un Bachelor RPI en alternance</p>
             </div>
             
-            <div id="text">
+            <div id="text" class="lazy">
                 <h2 id="titre-apropos">A propos de moi</h2>
                 <p>
                     <br><br>
@@ -60,8 +62,8 @@
                     J'ai donc fait des études de développeur web & web mobile où j'ai obtenu le titre 
                     professionnel RNCP de Niveau 5. (éq. BAC+2)
                     <br><br>
-                    Et je suis aujourd'hui à l'Afti numérique en Bachelor Concepteur Développeur 
-                    d'Applications à la recherche d'une alternance.
+                    Et je suis aujourd'hui à l'école H3 Hitema en Bachelor Responsable de Projets
+                    Informatique à la recherche d'une alternance.
                 </p>
             </div>
         </div>
@@ -71,28 +73,29 @@
         <h2 id="titre-projets">Mes projets</h2>
 
         <div id="mes-projets-container">
-            <div class="thumbnails"> 
-                <a href="#ancre2t"> <!-- effet hoover + lien ancre -->
-                    <img src="assets/images/thumbnail-2t-min.PNG" alt="Capture site 2TSerice">
+            <div class="thumbnails th2t"> 
+                <a href="#ancre2t">
+                    <img class="img2t lazy" data-src="assets/images/thumbnail-2t-min.PNG" alt="Capture site 2TSerice">
+                    <img class="img2t-hover lazy" data-src="assets/images/thumbnail-hover-2t-min.png" alt="Hover 2TServices thumbnail">
                 </a>
                 <h4>2TServices</h4>
                 <p>Site réalisé en stage</p>
             </div>
 
-            <div class="thumbnails"> 
-                <a href="#ancrePf"><!-- effet hoover + lien ancre  -->
-                    <img src="assets/images/thumbnail-pf-min.PNG" alt="Capture site Portfolio">
+            <div class="thumbnails thPf"> 
+                <a href="#ancrePf">
+                    <img class="imgPf lazy" data-src="assets/images/thumbnail-pf-min.PNG" alt="Capture site Portfolio">
+                    <img class="imgPf-hover lazy" data-src="assets/images/thumbnail-hover-pf-min.png" alt="Hover Portfolio thumbnail">
                 </a>
-                
                 <h4>Portfolio</h4>
                 <p>Le site sur lequel vous êtes !</p>
             </div>
 
-            <div class="thumbnails"> 
-                <a href="#ancreFc"><!-- effet hoover + lien ancre -->
-                    <img src="assets/images/thumbnail-fc-min.png" alt="Capture site Fast Caddie">
+            <div class="thumbnails thFc"> 
+                <a href="#ancreFc">
+                    <img class="imgFc lazy" data-src="assets/images/thumbnail-fc-min.png" alt="Capture site Fast Caddie">
+                    <img class="imgFc-hover lazy" data-src="assets/images/thumbnail-hover-fc-min.png" alt="Hover FastCaddie thumbnail">
                 </a>
-                
                 <h4>Fast caddie</h4>
                 <p>Projet de fin de formation</p>
             </div>
@@ -105,51 +108,50 @@
 
             <div>
                 <p>Conception de MCD, MLD</p>
-                <img src="assets/images/logo-jmerise-min.png" alt="Logo JMerise">
-                <img id="logoPG" src="assets/images/logo-pg-min.png" alt="Logo PostGre SQL">
+                <img id="logoJM" class="lazy" data-src="assets/images/logo-jmerise-min.png" alt="Logo JMerise">
+                <img id="logoPG" class="lazy" data-src="assets/images/logo-pg-min.png" alt="Logo PostGre SQL">
             </div>
 
             <h2 id="learning-title">Actually learning</h2> 
 
             <div>
-                <img id="logoApache" src="assets/images/logo-apache-min.png" alt="logo-Apache2">
-                <img id="logoDebian" src="assets/images/logo-debian-min.png" alt="logo-Debian">
-                <img id="logoC" src="assets/images/logo-c-min.png" alt="logo-C">
+                <img id="logoApache" class="lazy" data-src="assets/images/logo-apache-min.png" alt="logo-Apache2">
+                <img id="logoDebian" class="lazy" data-src="assets/images/logo-debian-min.png" alt="logo-Debian">
+                <img id="logoC" class="lazy" data-src="assets/images/logo-c-min.png" alt="logo-C">
             </div>
         </div>
         <!-- Fin Partie : Learning-->
 
         <!-- Partie : 2TService -->
-        <div class="projet-container">
+        <div class="projet-container" id="2t-container">
             
             <div class="titre-container" id="ancre2t">
-                <img src="assets/images/trait1-min.PNG" alt="trait">
+                <img class="lazy" data-src="assets/images/trait1-min.PNG" alt="trait">
                 <h2>2TServices</h2>
-                <img src="assets/images/trait2-min.PNG" alt="trait">
+                <img class="lazy" data-src="assets/images/trait2-min.PNG" alt="trait">
             </div>
             <h4 class="sous-titre">Projet réalisé durant un stage de 2 mois</h4>
             
             <div class="logoContainer">
-                <img class="logo" id="logo1-2t" src="assets/images/logo-html-min.png" alt="logo-html">
-                <img class="logo" id="logo2-2t" src="assets/images/logo-css-min.png" alt="logo-css">
-                <img class="logo" id="logo3-2t" src="assets/images/logo-scaleway-min.png" alt="logo-scaleway">
-                <img class="logo" id="logo4-2t" src="assets/images/logo-cpanel-min.png" alt="logo-cpanel">
-                <img class="logo" id="logo5-2t" src="assets/images/logo-php-min.png" alt="logo-php">
-                <img class="logo" id="logo6-2t" src="assets/images/logo-js-min.png" alt="logo-js">
+                <img class="logo lazy" id="logo1-2t" data-src="assets/images/logo-html-min.png" alt="logo-html">
+                <img class="logo lazy" id="logo2-2t" data-src="assets/images/logo-css-min.png" alt="logo-css">
+                <img class="logo lazy" id="logo3-2t" data-src="assets/images/logo-scaleway-min.png" alt="logo-scaleway">
+                <img class="logo lazy" id="logo4-2t" data-src="assets/images/logo-cpanel-min.png" alt="logo-cpanel">
+                <img class="logo lazy" id="logo5-2t" data-src="assets/images/logo-php-min.png" alt="logo-php">
+                <img class="logo lazy" id="logo6-2t" data-src="assets/images/logo-js-min.png" alt="logo-js">
             </div>
 
-            <a href="https://2tservices.de">
-                <div class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide"><img src="assets/images/caroussel/2t-1-min.PNG" alt="Images Site 2Tservices.de"></li>
-                            <li class="splide__slide"><img src="assets/images/caroussel/2t-2-min.png" alt="Images Site 2Tservices.de"></li>
-                            <li class="splide__slide"><img src="assets/images/caroussel/2t-3-min.PNG" alt="Images Site 2Tservices.de"></li>
-                            <li class="splide__slide"><img src="assets/images/caroussel/2t-4-min.PNG" alt="Images Site 2Tservices.de"></li>
-                        </ul>
-                    </div>
+            
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><a href="https://2tservices.de"><img class="lazy" style="transition: 0.5s;" data-src="assets/images/caroussel/2t-1-min.PNG" alt="Images Site 2Tservices.de"></a></li>
+                        <li class="splide__slide"><a href="https://2tservices.de"><img class="lazy" data-src="assets/images/caroussel/2t-2-min.png" alt="Images Site 2Tservices.de"></a></li>
+                        <li class="splide__slide"><a href="https://2tservices.de"><img class="lazy" data-src="assets/images/caroussel/2t-3-min.PNG" alt="Images Site 2Tservices.de"></a></li>
+                        <li class="splide__slide"><a href="https://2tservices.de"><img class="lazy" data-src="assets/images/caroussel/2t-4-min.PNG" alt="Images Site 2Tservices.de"></a>/li>
+                    </ul>
                 </div>
-            </a>
+            </div>
 
             <p class="description">
                 J'ai réalisé un stage de 2 mois au sein de l'entreprise 2TService au cours duquel j'ai développer et héberger un site web
@@ -162,9 +164,9 @@
                 et sont cnotrôlables facilement avec cPanel.
             </p>
 
-            <div id="recommendation-2t">
+            <div id="recommendation-2t" class="lazy">
                 <h4>Je recommande jordan car loreerze qrze raze <br> tzrtzare zaerze rzatzt ry</h4>
-                <a href="https://www.linkedin.com/in/marion-2tservices/"><img src="assets/images/photo-recommendation-min.jpg" alt="Photo Marion 2tservices"></a>
+                <a href="https://www.linkedin.com/in/marion-2tservices/"><img class="lazy" data-src="assets/images/photo-recommendation-min.jpg" alt="Photo Marion 2tservices"></a>
             </div>
         </div>
         <!-- Fin Partie : 2TService -->
@@ -173,16 +175,16 @@
         <div class="projet-container">
 
             <div class="titre-container" id="ancrePf">
-                <img src="assets/images/trait1-min.PNG" alt="trait">
+                <img class="lazy" data-src="assets/images/trait1-min.PNG" alt="trait">
                 <h2>Mon Portfolio</h2>
-                <img src="assets/images/trait2-min.PNG" alt="trait">
+                <img class="lazy" data-src="assets/images/trait2-min.PNG" alt="trait">
             </div>
             <h4 class="sous-titre">Site réalisé à la fin de ma formation</h4>
 
             <div class="logoContainer">
-                <img class="logo" id="logo1-Pf" src="assets/images/logo-html-min.png" alt="logo-html">
-                <img class="logo" id="logo2-Pf" src="assets/images/logo-css-min.png" alt="logo-css">
-                <img class="logo" id="logo3-Pf" src="assets/images/logo-js-min.png" alt="logo-js">
+                <img class="logo lazy" id="logo1-Pf" data-src="assets/images/logo-html-min.png" alt="logo-html">
+                <img class="logo lazy" id="logo2-Pf" data-src="assets/images/logo-css-min.png" alt="logo-css">
+                <img class="logo lazy" id="logo3-Pf" data-src="assets/images/logo-js-min.png" alt="logo-js">
             </div>
 
 
@@ -192,9 +194,9 @@
                 </div>
 
                 <div class="img-container">
-                    <img class="slide-Pf" src="assets/images/caroussel/pf-1-min.png" alt="Images du Portfolio de Jordan Archambault">
-                    <img class="slide-Pf" src="assets/images/caroussel/pf-2-min.png" alt="Images du Portfolio de Jordan Archambault">
-                    <img class="slide-Pf" src="assets/images/caroussel/pf-3-min.png" alt="Images du Portfolio de Jordan Archambault">
+                    <img class="slide-Pf lazy" style="transition: 1s;" data-src="assets/images/caroussel/pf-1-min.png" alt="Images du Portfolio de Jordan Archambault">
+                    <img class="slide-Pf lazy" data-src="assets/images/caroussel/pf-2-min.png" alt="Images du Portfolio de Jordan Archambault">
+                    <img class="slide-Pf lazy" data-src="assets/images/caroussel/pf-3-min.png" alt="Images du Portfolio de Jordan Archambault">
                 </div>
 
                 <div class="carre cD">
@@ -208,7 +210,7 @@
                 <br><br>
                 J'ai utilisé les langages HTML/CSS & JS ainsi que le package Splide pour un slider.           
                 <br><br>
-                Lien du github : <a href="https://github.com/LeSaligaud/Portfolio">Portfolio</a>
+                Lien du github : <a href="https://github.com/LeSaligaud/Portfolio" style="text-decoration: none;">Portfolio</a>
             </p>
         </div>
         <!-- Fin Partie : Portfolio -->
@@ -217,31 +219,31 @@
         <div class="projet-container">
             
             <div class="titre-container" id="ancreFc">
-                <img src="assets/images/trait1-min.PNG" alt="trait">
+                <img class="lazy" data-src="assets/images/trait1-min.PNG" alt="trait">
                 <h2>Fast Caddie</h2>
-                <img src="assets/images/trait2-min.PNG" alt="trait">
+                <img class="lazy" data-src="assets/images/trait2-min.PNG" alt="trait">
             </div>
             <h4 class="sous-titre">Site réalisé avec Symfony durant ma formation de développeur web</h4>
             
             <div class="logoContainer">
-                <img class="logo" id="logo1-Fc" src="assets/images/logo-html-min.png" alt="logo-html">
-                <img class="logo" id="logo2-Fc" src="assets/images/logo-css-min.png" alt="logo-css">
-                <img class="logo" id="logo3-Fc" src="assets/images/logo-php-min.png" alt="logo-php">
-                <img class="logo" id="logo4-Fc" src="assets/images/logo-symfony-min.png" alt="logo-scaleway">
-                <img class="logo" id="logo5-Fc" src="assets/images/logo-js-min.png" alt="logo-js">
+                <img class="logo lazy" id="logo1-Fc" data-src="assets/images/logo-html-min.png" alt="logo-html">
+                <img class="logo lazy" id="logo2-Fc" data-src="assets/images/logo-css-min.png" alt="logo-css">
+                <img class="logo lazy" id="logo3-Fc" data-src="assets/images/logo-php-min.png" alt="logo-php">
+                <img class="logo lazy" id="logo4-Fc" data-src="assets/images/logo-symfony-min.png" alt="logo-scaleway">
+                <img class="logo lazy" id="logo5-Fc" data-src="assets/images/logo-js-min.png" alt="logo-js">
             </div>
             
             <div class="sliderFc-container">
                 <i class="fas fa-arrow-left fa-2x fleche precedent"></i>
-                <img id="sliderFc" class="carousel-img-Fc" src="assets/images/caroussel/fc-1-min.png" alt="Images Fast Caddie">
+                <img id="sliderFc" class="carousel-img-Fc lazy" data-src="assets/images/caroussel/fc-1-min.png" alt="Images Fast Caddie">
                 <i class="fas fa-arrow-right fa-2x fleche suivant"></i>
             </div>
 
             <p class="description">
-                Ce projet a été réalisé durant la fin de ma formation avec 3 camarades, j'ai participé principalement
+                Ce projet a été réalisé durant la fin de ma formation, j'ai participé principalement
                 au back-end avec PHP. Ce projet intègre l'API google places, Bootstrap a aussi été utilisé.          
                 <br><br>
-                Lien du github : <a href="https://github.com/LeSaligaud/Fast-Caddie">Fast-Caddie</a>
+                Lien du github : <a style="text-decoration: none;" href="https://github.com/LeSaligaud/Fast-Caddie">Fast-Caddie</a>
             </p>
         </div>
         <!-- Fin Partie : FastCaddie -->

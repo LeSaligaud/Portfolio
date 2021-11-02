@@ -1,3 +1,39 @@
+// --- Lazy loading --- 
+let observer = new IntersectionObserver(function (elements) {
+    elements.forEach(function (element) {
+        if (element.isIntersecting) {
+            let thisElement = element.target; 
+      
+            thisElement.src = thisElement.dataset.src;
+            thisElement.style.opacity = "1";
+
+            if(thisElement.id == "recommendation-2t") {
+                thisElement.style.transform = "translate(20vw,0)";
+            }
+            else if(thisElement.id == "logoJM" || thisElement.id == "logoPG" 
+            || thisElement.id == "logoApache" || thisElement.id == "logoC") {
+                thisElement.style.transform = "translate(0,0)";
+            }
+            else if(thisElement.id == "logoDebian") {
+                thisElement.style.transform = "translate(7vw,0)";
+            }
+            else if(thisElement.id == "photo" || thisElement.id == "div-titre") {
+                thisElement.style.transform = "translate(0,0)";
+            }
+            
+            observer.unobserve(thisElement);
+        }
+        console.log('image chargée')
+    })
+});
+
+let imagesLazyLoad = document.getElementsByClassName("lazy");
+for (let i = 0; i < imagesLazyLoad.length; i++) {
+    observer.observe(imagesLazyLoad[i])
+}
+
+// --- Lazy loading ---
+
 // --- Slider 2TServices ---
 let splide_element = document.getElementsByClassName("splide")[0];
 
@@ -13,7 +49,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 
 // --- Slider Portfolio ---
-
 let carreG = document.getElementsByClassName("cG")[0];
 let carreD = document.getElementsByClassName("cD")[0];
 let captures = document.getElementsByClassName("slide-Pf");
@@ -86,7 +121,6 @@ carreD.addEventListener("click", s => {
     }, 1000);
     
 });
-
 // --- Slider Portfolio ---
 
 
