@@ -36,7 +36,10 @@ nav {
     padding: 5vh 1vw 1vh 1vw;
 }
 .nav-column:hover {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(170,196,231, 1));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(170,196,231, 0.2));
+}
+.nav-column:hover p {
+    color: rgb(40,66,101);
 }
 nav a {
     text-decoration: none;
@@ -98,7 +101,10 @@ nav p {
 }
 
 #job-titre {
+    padding: 0.5vh 0.5vw;
+    border-radius: 5px;
     color: rgb(0,23,249);
+    background-color: white;
 }
 /* -- Fin Partie : Photo + nom  -- */
 
