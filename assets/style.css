@@ -45,7 +45,6 @@ nav a {
     text-decoration: none;
 }
 nav p {
-    
     color: rgb(22, 22, 22);
     font-size: 1.1em;
     font-family: Verdana, Tahoma, sans-serif;
@@ -283,6 +282,10 @@ nav p {
 
 
 /* -- TOUS projets confondus -- */
+.mobile-hr {
+    display:none;
+}
+
 .projet-container {
     margin: 5vh 0 7vh 0;
     display: flex;

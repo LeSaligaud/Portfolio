@@ -3,7 +3,7 @@ let observer = new IntersectionObserver(function (elements) {
     elements.forEach(function (element) {
         if (element.isIntersecting) {
             let thisElement = element.target; 
-      
+
             thisElement.src = thisElement.dataset.src;
             thisElement.style.opacity = "1";
 

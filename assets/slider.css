@@ -84,3 +84,39 @@
     color: rgb(115, 162, 223);
 }
 /* -- Slider FastCaddie -- */
+
+
+/* -- Version mobile -- */
+@media only screen and (max-width: 767px) {
+    /* -- 2T -- */
+    .splide {
+        margin: 0 0;
+        object-fit: contain;
+        height: 40vh;
+        width: 80vw;
+    }
+    .splide__list, .splide__slide, .splide__slide a, .splide__slide img {
+        object-fit: contain;
+        height: 40vh;
+        width: 80vw;
+    }
+    /* -- 2T -- */
+
+    /* -- Portfolio -- */
+    .img-container {
+        width: 95vw;
+        height:40vh;
+    }
+    /* -- Portfolio -- */
+
+    /* -- FastCaddie -- */
+    .sliderFc-container {
+        width:95vw;
+        height:40vh;
+    }
+    .carousel-img-Fc {
+        margin: 0;
+        width: 80vw;
+    }
+    /* -- FastCaddie -- */
+}

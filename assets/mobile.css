@@ -9,9 +9,17 @@
 
 
 @media only screen and (max-width: 767px) {
+    body {
+        width: 100vw;
+    }
     /* Partie : Nav */
     nav {
         padding-right:10vw;
+        background-color: rgba(255,255,255,0.2);
+    }
+    .nav-column {
+        padding: 0;
+        
     }
 
     /* Partie : Photo + nom */
@@ -29,33 +37,40 @@
         display: flex;
         position: absolute;
         z-index: -1;
-        transform: translate(2.5vw, -7vh);
+        transform: translate(2.5vw, -10vh);
     }
     /* Fin Partie : Photo + nom */
 
+
     /* Partie : A propos */
+    #titre-apropos {
+        margin: 0;
+    }
     #a-propos-container div {
         width: 95%;
     }
 
     #text {
-        margin-top: 2vh;
-        padding-top: 2vh;
         border-top: solid rgba(0, 0, 0, 0.2) 1px;
     }
     /* Fin Partie : A propos */
 
+    
     /* Partie : Mes projets */
     #mes-projets-container {
         flex-wrap: wrap;
         align-items: center;
+        width: 95vw
     }
     .thumbnails {
         width: 70vw;
         margin-bottom: 7vh;
     }
     .thumbnails img {
-        width: auto;
+        width: 70vw;
+    }
+    .thFc {
+        margin: 0;
     }
     /* Fin Partie : Mes projets */
 
@@ -63,13 +78,14 @@
     #learning-container {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 30vh;
+        margin-bottom: 25vh;
     }
     #learning-title {
         display: none;
     }
     #learning-title-mobile {
         display: flex;
+        transform: translateY(-5vh);
     }
     #learning-container div p {
         display: none;
@@ -85,11 +101,27 @@
     #logoDebian {
         width: 20vw;
     }
+    #logoC {
+        transform: translate(20vw,0);
+    }
     /* Fin Partie : Actually learning */
 
     /* Partie : TOUS projets confondus */
+    .mobile-hr {
+        display: flex;
+        margin:0;
+    }
+    .projet-container {
+        margin: 0;
+    }
     .titre-container {
         flex-direction: column;
+    }
+    .titre-container img {
+        display: none;
+    }
+    .titre-container h2 {
+        margin: 0;
     }
 
     .description {
@@ -102,6 +134,9 @@
     /* Fin Partie : TOUS projets confondus */
 
     /* Partie : 2TServices */
+    #container-2t {
+        margin-top: 30vh;
+    }
     #logo1-2t, #logo2-2t, #logo3-2t, #logo4-2t, #logo5-2t, #logo6-2t {
         transform: translate(0 , 0);
     }
@@ -113,13 +148,6 @@
     }
     #recommendation-2t a img {
         margin-bottom: 2vh;
-    }
-    .splide {
-        margin: 0 0;
-        object-fit: contain;
-    }
-    .splide__list, .splide__slide, .splide__slide a, .splide__slide img {
-        object-fit: contain;
     }
     /* Fin Partie : 2TServices */  
 
